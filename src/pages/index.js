@@ -9,6 +9,7 @@ import Articles from "../components/sections/articles"
 import About from "../components/sections/about"
 import Interests from "../components/sections/interests"
 import Projects from "../components/sections/projects"
+import Technology from "../components/sections/technology"
 import Contact from "../components/sections/contact"
 import { splashScreen } from "../config"
 
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => (
     <About content={data.about.edges} />
     <Interests content={data.interests.edges} />
     <Projects content={data.projects.edges} />
+    <Technology content={data.technology.edges} />
     <Contact content={data.contact.edges} />
   </Layout>
 )
@@ -111,6 +113,23 @@ export const pageQuery = graphql`
           buttonVisible
           buttonUrl
           buttonText
+        }
+      }
+    }
+  }
+  technology: allMdx(filter: {fileAbsolutePath: {regex: "/technology/"}}) {
+    edges {
+      node {
+        body
+        frontmatter {
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
