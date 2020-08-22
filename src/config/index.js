@@ -19,12 +19,16 @@ module.exports = {
     // Medium, GitHub, LinkedIn, XING, Behance
     socialMedia: [
         {
-            name: "Twitter",
-            url: "https://twitter.com/votepurchase"
+            name: "Web app",
+            url: "https://votepurchase.net/"
         },
         {
-            name: "Github",
-            url: "https://github.com/kiyohken2000"
+            name: "AppStore",
+            url: "https://apps.apple.com/jp/app/retwpay/id1505869896?mt=8"
+        },
+        {
+            name: "Google Play",
+            url: "https://play.google.com/store/apps/details?id=net.votepurchase.retwpayapp"
         },
     ],
   
@@ -38,21 +42,18 @@ module.exports = {
                 name: "Features",
                 url: "/#projects",
             },
+            {
+                name: "Technology",
+                url: "/#technology",
+            },
         ],
         button: {
-            name: "Contact",
+            name: "Feedback",
             url: "/#contact",
         }
     },
 
     footerLinks: [
-        {
-            name: "Privacy",
-            url: "/privacy"
-        },
-        {
-            name: "Imprint",
-            url: "/imprint"
-        }
+        
     ]
 }
